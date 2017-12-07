@@ -22,10 +22,6 @@ import assignment.KdTree.DPoint;
  * @author Emrah Kivanc
  */
 public class KdTree<T extends KdTree.DPoint> implements Iterable<T> {
-
-//    private static double minEucDistance = Double.MAX_VALUE;
-//    public static DPoint firstCloserPoint;
-//    public static DPoint secondCloserPoint;
     
     
     public KdNode getRoot() {
