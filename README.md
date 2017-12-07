@@ -60,7 +60,7 @@ To Run the Tester, we need to specify the JUnit.jar file as classPath parameter:
 Command: <b> java -cp .:/somePathToJarFile/junit-4.10.jar org.junit.runner.JUnitCore assignment.Tester</b> 
 
 Sample output of the Tester File:
-![SampleInputfile]https://user-images.githubusercontent.com/976950/33738320-f9d5d0c8-dba9-11e7-89c3-5c0c5ce4ff7e.png "Enter File Name with exact path")
+![SampleInputfile](https://user-images.githubusercontent.com/976950/33738320-f9d5d0c8-dba9-11e7-89c3-5c0c5ce4ff7e.png "Enter File Name with exact path")
 
 There are two unitTest, one of them tests the developed nearestNeighbourSearch method and the other just tests the KDTree creation process.
 
