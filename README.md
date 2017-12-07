@@ -20,16 +20,19 @@ If we were solve the problem in brute force method it took O(n2) calculations bu
 * No maximum limit for points.
 
 # Usage instructions
-*  <b>Checking JDK: </b> The provided solution is developed with Java version 8, hence JDK should be installed to the test machine. To check if you have proper JDK, type the following command on terminal.
+
+<b>Note: The source code was developed by using Eclipse ide but the instruction was given for a common test environment. If you are using Eclipse or similar IDE you can download the source file and open the existing java project with your IDE.</b>
+
+1-  <b>Checking JDK: </b> The provided solution is developed with Java version 8, hence JDK should be installed to the test machine. To check if you have proper JDK, type the following command on terminal.
 
  <b>javac -version</b>
 
  You should see your installed version of Java on the terminal.
-*  <b>Compiling the Java files: </b> Download the source code, open terminal and navigate to "ClosestPairProblem/src" in the project directory, Type the following command to compile Java
+2-  <b>Compiling the Java files: </b> Download the source code, open terminal and navigate to "ClosestPairProblem/src" in the project directory, Type the following command to compile Java
 
 Command:  <b>javac assignment/Runner.java </b>
 
-*  <b>Runing the application: </b> To run this application, open terminal and navigate to "ClosestPairProblem/src" in the project directory, then type the following command:
+3-  <b>Runing the application: </b> To run this application, open terminal and navigate to "ClosestPairProblem/src" in the project directory, then type the following command:
 Command: <b> java assignment.Runner </b> 
 you should see the following message:
 
@@ -37,11 +40,11 @@ you should see the following message:
 	Welcome to Closest Distance Exercise!
 	********************************************************************************
 
-*  <b>Enter Input File with absolute path:</b>The Program will ask an input file to operate like the following image:
+4-  <b>Enter Input File with absolute path:</b>The Program will ask an input file to operate like the following image:
 ![SampleInputfile](https://user-images.githubusercontent.com/976950/33721951-931c0102-db79-11e7-9c74-204c3377507f.png "Enter File Name with exact path")
 
 
-* <b> Get Result:</b> After entering the file name with its absolute path, the program draw the calculated KDTree on the console, then writes the line numbers of closest points as below:
+5- <b> Get Result:</b> After entering the file name with its absolute path, the program draw the calculated KDTree on the console, then writes the line numbers of closest points as below:
 The final output file directory will be written on the console as well.
 ![SampleInputfile](https://user-images.githubusercontent.com/976950/33721953-934b6f50-db79-11e7-8ff4-dd6c23e25c08.png "Sample Output")
 
