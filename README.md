@@ -44,3 +44,21 @@ you should see the following message:
 * <b> Get Result:</b> After entering the file name with its absolute path, the program draw the calculated KDTree on the console, then writes the line numbers of closest points as below:
 The final output file directory will be written on the console as well.
 ![SampleInputfile](https://user-images.githubusercontent.com/976950/33721953-934b6f50-db79-11e7-8ff4-dd6c23e25c08.png "Sample Output")
+
+# Unit Tests
+The application has a unit test file called Tester.java. Unit tests are developed with JUnit library. You can download the JUnit library on the project on github (it is in the same directory as /bin directory )
+
+Before running the Tester, we need to compile it with the following command on the terminal:
+
+Command: <b> javac -cp somePathToJarFile/junit-4.10.jar assignment/KdTree.java assignment/Runner.java assignment/Tester.java</b>
+
+To Run the Tester, we need to specify the JUnit.jar file as classPath parameter:
+
+Command: <b> java -cp .:/somePathToJarFile/junit-4.10.jar org.junit.runner.JUnitCore assignment.Tester</b> 
+
+Sample output of the Tester File:
+![SampleInputfile]https://user-images.githubusercontent.com/976950/33738320-f9d5d0c8-dba9-11e7-89c3-5c0c5ce4ff7e.png "Enter File Name with exact path")
+
+There are two unitTest, one of them tests the developed nearestNeighbourSearch method and the other just tests the KDTree creation process.
+
+
