@@ -1,5 +1,6 @@
 package assignment;
 
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -9,11 +10,11 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Scanner;
 
-
 import assignment.KdTree.DPoint;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
+
 
 public class Runner {
 

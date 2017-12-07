@@ -1,5 +1,6 @@
 package assignment;
 
+
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -13,6 +14,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 import assignment.KdTree.DPoint;
+
 
 /**
  *  a k-d tree (short for k-dimensional tree) is a space-partitioning data structure for organizing points in a k-dimensional space.
@@ -94,6 +96,7 @@ public class KdTree<T extends KdTree.DPoint> implements Iterable<T> {
      */
     private static KdNode createNode(List<DPoint> list, int k, int depth) {
         if (list == null || list.size() == 0)
+        	
             return null;
         
         int axis = depth % k;
@@ -759,6 +762,7 @@ public class KdTree<T extends KdTree.DPoint> implements Iterable<T> {
 
 
 class CoordinateComparator  implements Comparator<DPoint> {
+	
 	
 	int axisId;
 
