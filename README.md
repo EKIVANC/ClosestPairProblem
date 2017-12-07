@@ -30,7 +30,8 @@ If we were solve the problem in brute force method it took O(n2) calculations bu
 Command:  <b>javac assignment/Runner.java </b>
 
 *  <b>Runing the application: </b> To run this application, open terminal and navigate to "ClosestPairProblem/src" in the project directory, then type the following command:
-java assignment.Runner you should see the following message:
+Command: <b> java assignment.Runner </b> 
+you should see the following message:
 
 	********************************************************************************
 	Welcome to Closest Distance Exercise!
