@@ -1,6 +1,6 @@
-# ClosestPairProblem
+# ClosestPairProblem - Solution with KD Tree
 
-# Summary of the solution
+# Solution Approach
 
 # The asymptotical running time of the algorithm
 
