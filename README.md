@@ -21,10 +21,14 @@ If we were solve the problem in brute force method it took O(n2) calculations bu
 
 # Usage instructions
 *  <b>Checking JDK: </b> The provided solution is developed with Java version 8, hence JDK should be installed to the test machine. To check if you have proper JDK, type the following command on terminal.
+
  <b>javac -version</b>
+
  You should see your installed version of Java on the terminal.
 *  <b>Compiling the Java files: </b> Download the source code, open terminal and navigate to "ClosestPairProblem/src" in the project directory, Type the following command to compile Java
-Command: javac assignment/Runner.java
+
+Command:  <b>javac assignment/Runner.java </b>
+
 *  <b>Runing the application: </b> To run this application, open terminal and navigate to "ClosestPairProblem/src" in the project directory, then type the following command:
 java assignment.Runner you should see the following message:
 
