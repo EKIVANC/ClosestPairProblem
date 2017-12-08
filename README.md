@@ -64,4 +64,6 @@ Sample output of the Tester File:
 
 There are two unitTest, one of them tests the developed nearestNeighbourSearch method and the other just tests the KDTree creation process.
 
+# Sample Input and Output Files
+Sample input and output files are in the "/sample_files" directory of the project.
 
