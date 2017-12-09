@@ -6,10 +6,32 @@ The input is a text file which each line specifies a point with tab separated do
 There are two common approaches of this problem, one of them is the Brute Force method means fetching all points by one by while calculating the distance of each point from one to another.
 The brute force solution is costly but it has some advantages like being simple and easy to implement.
 
-Another solution of the problem, which also implemented in this GitHub project, is creating a KD Tree with given N dimensional points, then using the constructed tree in calculating the distance between points. Thanks to this approach, we don't need to fetch all points in the space, we simply split the plane according to median values of the Nth axis of the points. Of course there could be closer points in splitted plane, and we need to care the splitted neighbour planes as well.
+Another solution of the problem, which also implemented in this GitHub project, is creating a KD Tree with given N dimensional points, then using the constructed tree in calculating the distance between points. Thanks to this approach, we mostly don't need to fetch all points in the space, we simply split the plane according to median values of the Nth axis of the points. Of course there could be closer points in splitted plane, and we need to care the splitted neighbour planes as well. We manage to do this by checking the distance of other splitted points recursively. 
 
 # The asymptotical running time of the algorithm
-If we were solve the problem in brute force method it took O(n2) calculations but thanks to KD Tree approach, it takes O(log(n)) calculations to success.
+if we were use the brute force method it took n<sup>2</sup>-n times calculation to complete. And for D dimension, it will be d*(n<sup>2</sup>-n) which becomes O(n<sup>2</sup>).
+
+For our case with a nearly balanced KD-Tree,
+
+For Construction;
+* Size: There will be 2N-1 nodes if 1 data point at each leaf.
+* Depth: O ( Log N )
+* Median + send point left, right : O(N) at every level of the tree
+Total construction time of the Tree is:<b> O( N Log N ) </b> 
+
+And For 1-NN Query:
+* Traverse down tree to starting point: O ( Log N )
+* Maximum backtrack and traverse like worst case:  O ( N )
+Complexity Range is between: O ( Log N ) -> O ( N ) according to pruning the nodes.
+
+O(N) is also the same complexity as the brute force search so for a single Nearest Search Query if we are unlucky about the structure of the data, we might actually take a penalty over a brute force search. But in some cases we can have significant gains in efficiency.   
+
+
+
+it will take O( N log(N)) for construction of the three, and for 1-NN query -> it takes O(Log N) to execute.
+
+For out specific problem, we need to fetch all points to check if there are a closer pairs in the tree.
+So our cost will be O(N) since we need to traverse the whole tree.
 
 # Limitations
 * Input text file should contain one point per line.
