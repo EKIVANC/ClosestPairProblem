@@ -9,7 +9,7 @@ The brute force solution is costly but it has some advantages like being simple 
 Another solution of the problem, which also implemented in this GitHub project, is creating a KD Tree with given N dimensional points, then using the constructed tree in calculating the distance between points. Thanks to this approach, we mostly don't need to fetch all points in the space, we simply split the plane according to median values of the Nth axis of the points. Of course there could be closer points in splitted plane, and we need to care the splitted neighbour planes as well. We manage to do this by checking the distance of other splitted points recursively. 
 
 # The asymptotical running time of the algorithm
-if we were use the brute force method it took n<sup>2</sup>-n times calculation to complete. And for D dimension, it will be d*(n<sup>2</sup>-n) which becomes O(n<sup>2</sup>).
+if brute force method were used, it took n<sup>2</sup>-n times calculation to complete, and for D dimension, it will be d*(n<sup>2</sup>-n) which becomes O(n<sup>2</sup>).
 
 For our case with a nearly balanced KD-Tree,
 
@@ -19,7 +19,7 @@ For Construction;
 * Median + send point left, right : O(N) at every level of the tree
 Total construction time of the Tree is:<b> O( N Log N ) </b> 
 
-And For 1-NN Query:
+For 1-NN Query:
 * Traverse down tree to starting point: O ( Log N )
 * Maximum backtrack and traverse like worst case:  O ( N )
 Complexity Range is between: O ( Log N ) -> O ( N ) according to pruning the nodes, but this values are exponential with d, so in KD-Tree we might face with performance problems in high numbers of Dimensions.
