@@ -22,9 +22,9 @@ Total construction time of the Tree is:<b> O( N Log N ) </b>
 And For 1-NN Query:
 * Traverse down tree to starting point: O ( Log N )
 * Maximum backtrack and traverse like worst case:  O ( N )
-Complexity Range is between: O ( Log N ) -> O ( N ) according to pruning the nodes.
+Complexity Range is between: O ( Log N ) -> O ( N ) according to pruning the nodes, but this values are exponential with d, so in KD-Tree we might face with performance problems in high numbers of Dimensions.
 
-O(N) is also the same complexity as the brute force search so for a single Nearest Search Query if we are unlucky about the structure of the data, we might actually take a penalty over a brute force search. But in some cases we can have significant gains in efficiency.   
+O(N) is also the same complexity as the brute force search so for a single Nearest Search Query if we are unlucky about the structure of the data, we might actually take a penalty over a brute force search. But in some cases we can have significant gains in efficiency. 	  
 
 
 # Limitations
