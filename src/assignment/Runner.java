@@ -6,7 +6,10 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -19,8 +22,7 @@ import java.io.FileWriter;
 public class Runner {
 
 	static double closestDistance = Double.MAX_VALUE;
-	static DPoint closestA = null;
-	static DPoint closestB = null;
+	static List<DPoint> closestPoints = new ArrayList<>();
 
 	public static void main(String[] args) throws IOException, URISyntaxException {
 
@@ -58,41 +60,64 @@ public class Runner {
 
 		// Find the closest two points until all points calculated
 		while (points2Sort.size() > 0) {
-			DPoint[] pair = new DPoint[2];
+			
 			Collection<DPoint> result = kdTree.nearestNeighbourSearch(2, points2Sort.get(0));
+			DPoint[] pair = new DPoint[result.size()];
 			result.toArray(pair);
 
 			if (pair[1].getNearestPointEclDistance() < closestDistance) {
 				// A closer pair found!
 				closestDistance = pair[1].getNearestPointEclDistance();
-				closestA = pair[0];
-				closestB = pair[1];
+				closestPoints.addAll(result);
 			}
+			
+			if (pair[1].getNearestPointEclDistance() == closestDistance) {
+				// An Equal Point has been found
+				for(DPoint tmpPoint: result) {
+					if( !closestPoints.contains(tmpPoint) ) {
+						closestPoints.add(tmpPoint);
+					}
+				}
+				
+			}
+			
 			// remove calculated point and go on
 			points2Sort.remove(points2Sort.get(0));
 			// points2Sort.removeAll(result);
 		}
 
-		saveFile(fileName.substring(0, fileName.length() - 4), initialPointList.indexOf(closestA) + 1, closestA,
-				initialPointList.indexOf(closestB) + 1, closestB);
+		saveFile(fileName.substring(0, fileName.length() - 4), initialPointList, closestPoints);
 	}
 
-	private static void saveFile(String fileName, int lineFirst, DPoint firstCloserPoint, int lineSecond,
-			DPoint secondCloserPoint) {
+	private static void saveFile(String fileName, List<DPoint> initialList, List<DPoint> closestPoints) {
 
 		BufferedWriter bw = null;
 		FileWriter fw = null;
 		String outputFileName = fileName.replace("input", "output") + ".txt";
+		List<Integer> lineNumbers = new ArrayList<>();
 		try {
-
-			String content = lineSecond + ":" +secondCloserPoint + System.getProperty("line.separator") + lineFirst
-					+ ":" + firstCloserPoint;
+			
+			StringBuilder content = new StringBuilder();
+			for ( DPoint dpoint : closestPoints ) {
+				int lineNumber = initialList.indexOf(dpoint)+1;
+				lineNumbers.add(lineNumber);
+				content.append( lineNumber  + ":" + dpoint + System.getProperty("line.separator"));
+			}
+			
+			
 			fw = new FileWriter(outputFileName);
 			bw = new BufferedWriter(fw);
-			bw.write(content);
-
+			bw.write(content.toString());
 			System.out.println("Done!");
-			System.out.println("The closest points line numbers are: "+lineFirst+" and "+ lineSecond+"");
+			Collections.sort(lineNumbers);
+			System.out.print("The closest points line numbers are: ");
+			
+			StringBuilder sblineNum = new StringBuilder(); 
+			for( Integer lineNum: lineNumbers ) {
+				sblineNum.append(lineNum+ " , ");
+			}
+			System.out.println(sblineNum.substring(0,sblineNum.length()-2));
+			System.out.println("*****************");
 			System.out.println("You can find the result in the followoing file:");
     			System.out.println(outputFileName);
     		
