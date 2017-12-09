@@ -80,6 +80,13 @@ Sample output of the Tester File:
 
 There are two unitTest, one of them tests the developed nearestNeighbourSearch method and the other just tests the KDTree creation process.
 
+
+| Test Nearest Point According to a given Array  | Construct KDTree and check items |
+| ------------- | ------------- |
+| ![UnitTest1](https://user-images.githubusercontent.com/976950/33799735-a3106b8c-dd42-11e7-9573-c0a76a9be133.png "Unit Test 1")   | ![UnitTest2](https://user-images.githubusercontent.com/976950/33799736-a5d8cc56-dd42-11e7-9a40-d8b4280eac13.png   "Unit Test 2") |
+
+
+
 # Sample Input and Output Files
 Sample input and output files are in the "/sample_files" directory of the project.
 
