@@ -94,7 +94,14 @@ public class Runner {
 
 		BufferedWriter bw = null;
 		FileWriter fw = null;
-		String outputFileName = fileName.replace("input", "output") + ".txt";
+		String outputFileName ="";
+		if(fileName.indexOf("input")>0) {
+			outputFileName = fileName.replace("input", "output") + ".txt";	
+		}
+		else {
+			outputFileName = fileName+"_Output"+".txt";
+		}
+		
 		List<Integer> lineNumbers = new ArrayList<>();
 		try {
 			
