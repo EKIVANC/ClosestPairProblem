@@ -27,12 +27,6 @@ Complexity Range is between: O ( Log N ) -> O ( N ) according to pruning the nod
 O(N) is also the same complexity as the brute force search so for a single Nearest Search Query if we are unlucky about the structure of the data, we might actually take a penalty over a brute force search. But in some cases we can have significant gains in efficiency.   
 
 
-
-it will take O( N log(N)) for construction of the three, and for 1-NN query -> it takes O(Log N) to execute.
-
-For out specific problem, we need to fetch all points to check if there are a closer pairs in the tree.
-So our cost will be O(N) since we need to traverse the whole tree.
-
 # Limitations
 * Input text file should contain one point per line.
 * The dimension separator is "\t".
