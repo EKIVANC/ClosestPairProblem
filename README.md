@@ -81,4 +81,6 @@ The output of the console containing tree is:
 ![SampleOutputfileMoreThan2ClosestPoints](https://user-images.githubusercontent.com/976950/33796099-1e2f6ad2-dcff-11e7-9ddf-7a32cca02c45.png "Sample Console Output File with More Than 2 ClosestPoints")
 
 The output file is as below:
+
+
 ![SampleThreeOutputfile](https://user-images.githubusercontent.com/976950/33796125-bc0bb03a-dcff-11e7-8224-04518f9921d5.png "Sample Output File with More Than 2 ClosestPoints")
