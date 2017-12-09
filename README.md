@@ -71,4 +71,14 @@ Sample input and output files are in the "/sample_files" directory of the projec
 The file with name "sample_input_2_5" was provided by me which has more than <b>two Closest points</b>. Actually it has 3 equal distance closest points. 
 
 <b>***The program can identify if more than two points are equal closest distance.</b>
- 
+
+# Sample Output of three closest points:
+As explained, there can be more then two closer point ( imagine N point those have equal distance ). The following images has a snapthot of file have equal distance  between 1.1.1 and 2.2.2 and 2 and 3.3.3
+
+![SampleInputfilewithMoreThan2ClosestPoint](https://user-images.githubusercontent.com/976950/33796098-1e07de4a-dcff-11e7-8390-14b0aeef1e11.png "Sample Inputfile with More Than 2 ClosestPoints")
+
+The output of the console containing tree is:
+![SampleOutputfileMoreThan2ClosestPoints](https://user-images.githubusercontent.com/976950/33796099-1e2f6ad2-dcff-11e7-9ddf-7a32cca02c45.png "Sample Console Output File with More Than 2 ClosestPoints")
+
+The output file is as below:
+![SampleThreeOutputfile](https://user-images.githubusercontent.com/976950/33796125-bc0bb03a-dcff-11e7-8224-04518f9921d5.png "Sample Output File with More Than 2 ClosestPoints")
