@@ -1,9 +1,9 @@
 # Closest Pair Problem - Solution with KD Tree:
 The task is to identify the closest pair of points in a given N dimensional space.
-The input is a text file which each line specifies a point with tab separated double numbers as N dimension of the point.
+The input is a text file which each line specifies a point with tab separated double type numbers as N dimension of the point.
 
 # Solution Approach
-There are two common approaches of this problem, one of them is the Brute Force method means fetching all points by one by while calculating the distance of each point from one to another.
+There are some common approaches of this problem, one of them is the Brute Force method means fetching all points by one by while calculating the distance of each point from one to another.
 The brute force solution is costly but it has some advantages like being simple and easy to implement.
 
 Another solution of the problem, which also implemented in this GitHub project, is creating a KD Tree with given N dimensional points, then using the constructed tree in calculating the distance between points. Thanks to this approach, we mostly don't need to fetch all points in the space, we simply split the plane according to median values of the Nth axis of the points. Of course there could be closer points in splitted plane, and we need to care the splitted neighbour planes as well. We manage to do this by checking the distance of other splitted points recursively. 
@@ -44,9 +44,13 @@ O(N) is also the same complexity as the brute force search so for a single Neare
  <b>javac -version</b>
 
  You should see your installed version of Java on the terminal.
-2-  <b>Compiling the Java files: </b> Download the source code, open terminal and navigate to "ClosestPairProblem/src" in the project directory, Type the following command to compile Java
 
-Command:  <b>javac assignment/Runner.java </b>
+2-  <b>Compiling the Java files: </b> Download the source code, open terminal and navigate to "ClosestPairProblem/src" in the project directory, Type the following command to compile Java class.
+
+Command:  
+
+<b>javac assignment/KdTree.java </b>
+<b>javac assignment/Runner.java </b>
 
 3-  <b>Runing the application: </b> To run this application, open terminal and navigate to "ClosestPairProblem/src" in the project directory, then type the following command:
 Command: <b> java assignment.Runner </b> 
