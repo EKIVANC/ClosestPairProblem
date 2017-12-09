@@ -68,4 +68,7 @@ There are two unitTest, one of them tests the developed nearestNeighbourSearch m
 Sample input and output files are in the "/sample_files" directory of the project.
 
 # Sample Input File Provided by me
-The file with name "sample_input_2_5" was provided by me which has more than <b>two Closest points</b>. Actually it gas 3 equal distance closest points. The program can identify if more than two points are equal closest distance. 
+The file with name "sample_input_2_5" was provided by me which has more than <b>two Closest points</b>. Actually it has 3 equal distance closest points. 
+
+<b>***The program can identify if more than two points are equal closest distance.</b>
+ 

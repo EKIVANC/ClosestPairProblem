@@ -644,7 +644,6 @@ public class KdTree<T extends KdTree.DPoint> implements Iterable<T> {
          * @return euclidean distance.
          */
         private static final double euclideanDistance(DPoint o1, DPoint o2) {
-//            return Math.sqrt(Math.pow((o1.x - o2.x), 2) + Math.pow((o1.y - o2.y), 2) + Math.pow((o1.z - o2.z), 2));
         		double retVal = 0;
         		
         		for (int i =0; i<o1.getCoordinates().length; i++) {
@@ -652,12 +651,6 @@ public class KdTree<T extends KdTree.DPoint> implements Iterable<T> {
         		}
         		
         		double retval = Math.sqrt(retVal);
-//        		// update ClosestValues
-//        		if(retval < minEucDistance && retval > 0) {
-//        			minEucDistance = retval;
-//        			firstCloserPoint = o1;
-//        			secondCloserPoint = o2;
-//        		}
         		
         		return retval;
         }
