@@ -46,7 +46,7 @@ you should see the following message:
 
 5- <b> Get Result:</b> After entering the file name with its absolute path, the program draw the calculated KDTree on the console, then writes the line numbers of closest points as below:
 The final output file directory will be written on the console as well.
-![SampleInputfile](https://user-images.githubusercontent.com/976950/33721953-934b6f50-db79-11e7-8ff4-dd6c23e25c08.png "Sample Output")
+![SampleInputfile](https://user-images.githubusercontent.com/976950/33797948-c0692410-dd21-11e7-95a8-61d69c1f81f3.png "Sample Output")
 
 # Unit Tests
 The application has a unit test file called Tester.java. Unit tests are developed with JUnit library. You can download the JUnit library on the project on github (it is in the same directory as /bin directory )
@@ -78,9 +78,9 @@ As explained, there can be more then two closer point ( imagine N point those ha
 ![SampleInputfilewithMoreThan2ClosestPoint](https://user-images.githubusercontent.com/976950/33796098-1e07de4a-dcff-11e7-8390-14b0aeef1e11.png "Sample Inputfile with More Than 2 ClosestPoints")
 
 The output of the console containing tree is:
-![SampleOutputfileMoreThan2ClosestPoints](https://user-images.githubusercontent.com/976950/33796099-1e2f6ad2-dcff-11e7-9ddf-7a32cca02c45.png "Sample Console Output File with More Than 2 ClosestPoints")
+![SampleOutputfileMoreThan2ClosestPoints](https://user-images.githubusercontent.com/976950/33797950-c61dd504-dd21-11e7-8bbb-81856d6ec898.png "Sample Console Output File with More Than 2 ClosestPoints")
 
 The output file is as below:
 
 
-![SampleThreeOutputfile](https://user-images.githubusercontent.com/976950/33796125-bc0bb03a-dcff-11e7-8224-04518f9921d5.png "Sample Output File with More Than 2 ClosestPoints")
+![SampleThreeOutputfile](https://user-images.githubusercontent.com/976950/33797951-c9bb9656-dd21-11e7-8c4d-b0b403736e19.png "Sample Output File with More Than 2 ClosestPoints")

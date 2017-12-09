@@ -704,11 +704,21 @@ public class KdTree<T extends KdTree.DPoint> implements Iterable<T> {
         public String toString() {
             StringBuilder builder = new StringBuilder();
             for(int i=0; i< this.coordinates.length; i++) {
-            	builder.append(this.coordinates[i]).append("\t");
+            	builder.append( formatNumber(this.coordinates[i])  ).append("\t");
             }
-            return builder.substring(0, builder.length() - 2);
+            // return builder.substring(0, builder.length() - 1);
+            return builder.toString();
         }
     }
+    
+    // nicely format the doubles..
+	public static String formatNumber(double d)
+	{
+	    if(d == (long) d)
+	        return String.format("%d",(long)d);
+	    else
+	        return String.format("%s",d);
+	}
 
     protected static class TreePrinter {
 
@@ -786,5 +796,6 @@ class CoordinateComparator  implements Comparator<DPoint> {
 		this.axisId = axisId;
 	}
 	
+
 }
 
