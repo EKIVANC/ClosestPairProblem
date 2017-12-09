@@ -65,9 +65,10 @@ public class Runner {
 			DPoint[] pair = new DPoint[result.size()];
 			result.toArray(pair);
 
-			if (pair[1].getNearestPointEclDistance() < closestDistance) {
+			if (pair[result.size()-1].getNearestPointEclDistance() < closestDistance) {
 				// A closer pair found!
-				closestDistance = pair[1].getNearestPointEclDistance();
+				closestDistance = pair[result.size()-1].getNearestPointEclDistance();
+				closestPoints.clear();
 				closestPoints.addAll(result);
 			}
 			
