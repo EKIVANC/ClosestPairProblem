@@ -50,8 +50,13 @@ O(N) is also the same complexity as the brute force search so for a single Neare
 
 Command:  
 
+<b>javac assignment/InputValidationexception.java</b>
+
 <b>javac assignment/KdTree.java </b>
+
 <b>javac assignment/Runner.java </b>
+
+
 
 3-  <b>Runing the application: </b> To run this application, open terminal and navigate to "ClosestPairProblem/src" in the project directory, then type the following command:
 Command: <b> java assignment.Runner </b> 
