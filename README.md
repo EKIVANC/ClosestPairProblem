@@ -48,7 +48,7 @@ O(N) is also the same complexity as the brute force search so for a single Neare
 
 2-  <b>Compiling the Java files: </b> Download the source code, open terminal and navigate to "ClosestPairProblem/src" in the project directory, Type the following command to compile Java class.
 
-Command:  
+Commands:  
 
 <b>javac assignment/InputValidationexception.java</b>
 
