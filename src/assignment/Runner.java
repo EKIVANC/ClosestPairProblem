@@ -21,7 +21,7 @@ public class Runner {
 
 	private static final String MSG_INPUT_IS_EMPTY = "Input file is empty!, please give a proper input file.";
 	private static final String MSG_INPUT_LESS_THAN_TWO = "Number of inputs should me more than two to operate!";
-	private static final String MSG_INPUT_DIMENSIONS_NOT_SAME = "Dimesions of input has to be same!";
+	private static final String MSG_INPUT_DIMENSIONS_NOT_SAME = "Dimesions of input have to be the same!";
 	
 	static double closestDistance = Double.MAX_VALUE;
 	
