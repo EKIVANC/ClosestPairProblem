@@ -17,6 +17,7 @@ For Construction;
 * Size: There will be 2N-1 nodes if 1 data point at each leaf.
 * Depth: O ( Log N )
 * Median + send point left, right : O(N) at every level of the tree
+
 Total construction time of the Tree is:<b> O( N Log N ) </b> 
 
 For 1-NN Query:
@@ -37,7 +38,7 @@ O(N) is also the same complexity as the brute force search so for a single Neare
 
 # Usage instructions
 
-<b>Note: The source code was developed by using Eclipse ide but the instruction was given for a common test environment. If you are using Eclipse or similar IDE you can download the source file and open the existing java project with your IDE.</b>
+<b>Note: The source code was developed by using Eclipse IDE but the instruction was given for a common test environment. If you are using Eclipse or similar IDE you can download the source file and open the existing java project with your IDE.</b>
 
 1-  <b>Checking JDK: </b> The provided solution is developed with Java version 8, hence JDK should be installed to the test machine. To check if you have proper JDK, type the following command on terminal.
 
