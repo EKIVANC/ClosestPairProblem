@@ -6,10 +6,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -21,10 +19,15 @@ import java.io.FileWriter;
 
 public class Runner {
 
+	private static final String MSG_INPUT_IS_EMPTY = "Input file is empty!, please give a proper input file.";
+	private static final String MSG_INPUT_LESS_THAN_TWO = "Number of inputs should me more than two to operate!";
+	private static final String MSG_INPUT_DIMENSIONS_NOT_SAME = "Dimesions of input has to be same!";
+	
 	static double closestDistance = Double.MAX_VALUE;
+	
 	static List<DPoint> closestPoints = new ArrayList<>();
 
-	public static void main(String[] args) throws IOException, URISyntaxException {
+	public static void main(String[] args) throws IOException, URISyntaxException, InputValidationException {
 
 		// create a scanner so we can read the command-line input
 	    Scanner scanner = new Scanner(System.in);
@@ -155,18 +158,35 @@ public class Runner {
 
 	}
 
-	private static List<DPoint> readLines(String filename) throws IOException {
+	
+	private static List<DPoint> readLines(String filename) throws IOException, InputValidationException {
 		FileReader fileReader = new FileReader(filename);
 		BufferedReader bufferedReader = new BufferedReader(fileReader);
 
 		List<DPoint> points = new ArrayList<DPoint>();
 
+		int tmpDimension = 0;
 		String line = null;
 		int lineNumber = 1;
 		while ((line = bufferedReader.readLine()) != null) {
+			
+			if(line == null || line.length() == 0) {
+				throw new InputValidationException(MSG_INPUT_IS_EMPTY);
+			}
+			
 			String[] numbersInString = line.split("\t");
 			double[] coordinatesPerPoint = new double[numbersInString.length];
 
+			if(tmpDimension == 0 ) {
+				tmpDimension = numbersInString.length;
+			}
+			else {
+				if(tmpDimension != numbersInString.length)
+				{
+					throw new InputValidationException(MSG_INPUT_DIMENSIONS_NOT_SAME);
+				}
+			}
+			
 			for (int i = 0; i < numbersInString.length; i++) {
 				coordinatesPerPoint[i] = Double.parseDouble(numbersInString[i]);
 			}
@@ -175,8 +195,21 @@ public class Runner {
 			points.add(dpoint);
 			lineNumber++;
 		}
+		
+		
+		if(points == null || points.size() ==0 ) {
+			throw new InputValidationException(MSG_INPUT_IS_EMPTY);
+		}
+		
+		else if(points.size() < 3  ) {
+			throw new InputValidationException(MSG_INPUT_LESS_THAN_TWO);
+		}
+		
+
 		bufferedReader.close();
 		return points;
 	}
+
+	
 
 }

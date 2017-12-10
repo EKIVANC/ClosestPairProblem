@@ -112,3 +112,15 @@ The output file is as below:
 
 
 ![SampleThreeOutputfile](https://user-images.githubusercontent.com/976950/33797951-c9bb9656-dd21-11e7-8c4d-b0b403736e19.png "Sample Output File with More Than 2 ClosestPoints")
+
+# Input Validation:
+The application has the following validation rules. A user defined exception class (InputValidationException) was implemented to handle the faulty input issues.
+
+* Empty input
+* Input with dimension problem. (All points have to be the same dimensions)
+* Input with less than three points. 
+ 
+ 
+| Dimension validation result  | Empty file result |
+| ------------- | ------------- |
+| ![Dimension_Validation_Problem](https://user-images.githubusercontent.com/976950/33805827-dcdd6d64-ddcf-11e7-93ab-9d9545875272.png "Validation_1")   | ![EmptyFile_Validation_Problem](https://user-images.githubusercontent.com/976950/33805828-df9e3420-ddcf-11e7-8552-558aed2e090c.png   "Validation_2") |
